@@ -20,10 +20,9 @@
 ## 🧿 Status Indicator
 
 <p align="center">
-  <img src="https://img.shields.io/badge/STATUS-ONLINE-ff0000?style=for-the-badge&labelColor=0d0d0d" />
-  <img src="https://img.shields.io/badge/MODE-DARK-111111?style=for-the-badge&labelColor=0d0d0d" />
-  <img src="https://img.shields.io/badge/STATE-COMPILING-00e5ff?style=for-the-badge&labelColor=0d0d0d" />
+  <img src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/main/assets/status-hud.svg" width="900" alt="Status HUD" />
 </p>
+
 
 ---
 
@@ -36,6 +35,13 @@
   <img src="https://img.shields.io/badge/Java-1a1a1a?style=for-the-badge&logo=openjdk&logoColor=red">
   <img src="https://img.shields.io/badge/C%23-000000?style=for-the-badge&logo=c-sharp&logoColor=purple">
   <img src="https://img.shields.io/badge/PHP-0d0d0d?style=for-the-badge&logo=php&logoColor=violet">
+</p>
+
+---
+## 📟 Stat Sheet
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/main/assets/stat-sheet.svg" width="900" alt="Mozuku Stat Sheet" />
 </p>
 
 ---
