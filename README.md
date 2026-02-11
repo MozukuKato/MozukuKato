@@ -39,9 +39,8 @@
 ---
 
 <p align="center">
-  <img src="https://github-contribution-grid-snake.vercel.app/api?username=MozukuKato&theme=github-dark" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MozukuKato&theme=tokyo-night&bg_color=0d0d0d&color=ff0000&line=00e5ff&point=ff00b3&area=true&hide_border=true" />
 </p>
-
 
 ---
 
