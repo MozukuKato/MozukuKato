@@ -20,9 +20,11 @@
 
 ## 🧿 Status Indicator
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/main/assets/status-hud.svg?v=2" width="900" alt="Status HUD" />
-</p>
+<img width="1248" height="210" alt="image" src="https://github.com/user-attachments/assets/5143641f-a701-4899-b77d-ba1445d8293b" />
+<!-- =========================
+     MOZUKU // PROFILE DOSSIER
+     Dark + Anime-Core + Glitch
+========================== -->
 
 
 ---
