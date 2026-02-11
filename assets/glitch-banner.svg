@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="110" viewBox="0 0 1200 110">
+  <defs>
+    <filter id="glitch">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01 0.2" numOctaves="2" seed="2" result="noise">
+        <animate attributeName="baseFrequency" dur="2.4s" values="0.01 0.2;0.02 0.35;0.01 0.2" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G">
+        <animate attributeName="scale" dur="1.2s" values="2;14;3;10;2" repeatCount="indefinite"/>
+      </feDisplacementMap>
+    </filter>
+
+    <style>
+      .bg { fill: #0d0d0d; }
+      .base {
+        font: 700 34px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="110" rx="18" />
+
+  <!-- cyan layer -->
+  <g opacity="0.85">
+    <text x="600" y="68" text-anchor="middle" class="base" fill="#00e5ff" filter="url(#glitch)">
+      CLASSIFIED DOSSIER // ACCESS GRANTED
+    </text>
+  </g>
+
+  <!-- magenta layer -->
+  <g opacity="0.7" transform="translate(-2,1)">
+    <text x="600" y="68" text-anchor="middle" class="base" fill="#ff00b3">
+      CLASSIFIED DOSSIER // ACCESS GRANTED
+    </text>
+    <animateTransform attributeName="transform" type="translate" dur="0.6s"
+      values="-2 1;2 -1;-1 0;1 1;-2 1" repeatCount="indefinite"/>
+  </g>
+
+  <!-- red main layer -->
+  <g opacity="1">
+    <text x="600" y="68" text-anchor="middle" class="base" fill="#ff3b3b">
+      CLASSIFIED DOSSIER // ACCESS GRANTED
+    </text>
+  </g>
+
+  <!-- scanline -->
+  <rect x="40" y="54" width="1120" height="2" fill="#ff0000" opacity="0.35">
+    <animate attributeName="y" dur="2.2s" values="20;90;20" repeatCount="indefinite"/>
+  </rect>
+</svg>
