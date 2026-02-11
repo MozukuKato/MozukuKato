@@ -1,31 +1,27 @@
-<img width="1248" height="210" alt="image" src="https://github.com/user-attachments/assets/5143641f-a701-4899-b77d-ba1445d8293b" />
 <!-- =========================
      MOZUKU // PROFILE DOSSIER
      Dark + Anime-Core + Glitch
 ========================== -->
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=28&duration=2600&pause=900&color=FF0000&center=true&vCenter=true&width=780&lines=Initializing...;Loading+User:+Mozuku;Status:+ONLINE;Booting+Modules:+C%2B%2B+%7C+Lua+%7C+Python+%7C+Java+%7C+C%23+%7C+PHP;Welcome+to+the+Lab." />
+  <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=28&duration=2600&pause=900&color=FF0000&center=true&vCenter=true&width=780&lines=Initializing...;Loading+User:+Mozuku;Status:+ONLINE;Modules:+C%2B%2B+%7C+Lua+%7C+Python+%7C+Java+%7C+C%23+%7C+PHP;Welcome+to+the+Lab." />
 </p>
 
+
 <h1 align="center">🌑 Mozuku 🌑</h1>
-<h3 align="center">They/Them • 15 • Pansexual • Music Creator.
+<h3 align="center">They/Them • 15 • Pansexual • Music Creator.</h3>
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/main/assets/glitch-banner.svg" width="900" alt="CLASSIFIED DOSSIER // ACCESS GRANTED" />
 </p>
-
-
 
 ---
 
 ## 🧿 Status Indicator
 
-<img width="1248" height="210" alt="image" src="https://github.com/user-attachments/assets/5143641f-a701-4899-b77d-ba1445d8293b" />
-<!-- =========================
-     MOZUKU // PROFILE DOSSIER
-     Dark + Anime-Core + Glitch
-========================== -->
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/main/assets/status-hud.svg?v=3" width="900" alt="Status HUD" />
+</p>
 
 ---
 
@@ -41,6 +37,7 @@
 </p>
 
 ---
+
 ## 📟 Stat Sheet
 
 <p align="center">
