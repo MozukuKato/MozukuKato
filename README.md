@@ -38,6 +38,12 @@
 
 ---
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/output/github-contribution-grid-snake-dark.svg" alt="snake animation" />
+</p>
+
+---
+
 ## 📟 Stat Sheet
 
 <p align="center">
