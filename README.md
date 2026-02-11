@@ -39,8 +39,9 @@
 ---
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MozukuKato&theme=tokyo-night&bg_color=0d0d0d&color=ff0000&line=00e5ff&point=ff00b3&area=true&hide_border=true" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MozukuKato&theme=tokyo-night&bg_color=06060a&color=00e5ff&line=ff0000&point=00e5ff&area=true&area_color=ff0000&hide_border=true" />
 </p>
+
 
 
 
