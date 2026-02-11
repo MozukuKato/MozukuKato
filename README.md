@@ -14,11 +14,6 @@
 </p>
 
 
-<p align="center">
-  <span class="glitch" data-text="CLASSIFIED DOSSIER // ACCESS GRANTED">CLASSIFIED DOSSIER // ACCESS GRANTED</span>
-</p>
-
-
 
 ---
 
