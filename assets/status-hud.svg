@@ -30,13 +30,6 @@
       </feTurbulence>
       <feDisplacementMap in="SourceGraphic" in2="n" scale="1.6" xChannelSelector="R" yChannelSelector="G"/>
     </filter>
-
-    <style>
-      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
-      .label { font-size: 18px; letter-spacing: 0.18em; fill: #cbd5e1; opacity: 0.9; }
-      .value { font-size: 22px; letter-spacing: 0.18em; fill: #0b0f18; font-weight: 700; }
-      .chip { rx: 14; }
-    </style>
   </defs>
 
   <!-- panel -->
@@ -52,29 +45,41 @@
   </rect>
 
   <!-- header -->
-  <g class="mono" opacity="0.95">
+  <g opacity="0.95" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace">
     <text x="70" y="64" font-size="18" letter-spacing="0.22em" fill="#00e5ff">SYSTEM</text>
     <text x="170" y="64" font-size="18" letter-spacing="0.22em" fill="#ff3b3b">HUD</text>
     <text x="240" y="64" font-size="18" letter-spacing="0.22em" fill="#cbd5e1" opacity="0.7">// MOZUKU</text>
   </g>
 
   <!-- chips row -->
-  <g class="mono" filter="url(#jitter)">
+  <g filter="url(#jitter)" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace">
     <!-- STATUS -->
-    <text x="250" y="98" class="label">STATUS</text>
-    <rect x="352" y="76" width="170" height="40" class="chip" fill="#ff0000" filter="url(#softGlow)"/>
-    <text x="437" y="104" text-anchor="middle" class="value">ONLINE</text>
+    <text x="250" y="98" font-size="18" letter-spacing="0.18em" fill="#cbd5e1" opacity="0.9">STATUS</text>
+    <rect x="352" y="76" width="170" height="40" rx="14" fill="#ff0000" filter="url(#softGlow)"/>
+    <text x="437" y="104" text-anchor="middle" font-size="22" letter-spacing="0.18em" fill="#0b0f18" font-weight="700">ONLINE</text>
 
     <!-- MODE -->
-    <text x="550" y="98" class="label">MODE</text>
-    <rect x="626" y="76" width="170" height="40" class="chip" fill="#111111" stroke="#ffffff" stroke-opacity="0.08"/>
-    <text x="711" y="104" text-anchor="middle" class="value" fill="#e2e8f0">DARK</text>
+    <text x="550" y="98" font-size="18" letter-spacing="0.18em" fill="#cbd5e1" opacity="0.9">MODE</text>
+    <rect x="626" y="76" width="170" height="40" rx="14" fill="#111111" stroke="#ffffff" stroke-opacity="0.08"/>
+    <text x="711" y="104" text-anchor="middle" font-size="22" letter-spacing="0.18em" fill="#e2e8f0" font-weight="700">DARK</text>
 
     <!-- STATE -->
-    <text x="824" y="98" class="label">STATE</text>
-    <rect x="912" y="76" width="220" height="40" class="chip" fill="#00e5ff" filter="url(#softGlow)"/>
-    <text x="1022" y="104" text-anchor="middle" class="value">TRAINING ARC</text>
+    <text x="824" y="98" font-size="18" letter-spacing="0.18em" fill="#cbd5e1" opacity="0.9">STATE</text>
+    <rect x="912" y="76" width="220" height="40" rx="14" fill="#00e5ff" filter="url(#softGlow)"/>
+    <text x="1022" y="104" text-anchor="middle" font-size="22" letter-spacing="0.18em" fill="#0b0f18" font-weight="700">TRAINING ARC</text>
   </g>
 
   <!-- corner pips -->
-  <circle
+  <circle cx="60" cy="44" r="5" fill="#00e5ff" opacity="0.8"/>
+  <circle cx="78" cy="44" r="5" fill="#ff00b3" opacity="0.55"/>
+  <circle cx="96" cy="44" r="5" fill="#ff0000" opacity="0.7"/>
+
+  <!-- heartbeat pulse -->
+  <g>
+    <circle cx="1145" cy="48" r="7" fill="#ff0000" opacity="0.7"/>
+    <circle cx="1145" cy="48" r="7" fill="#ff0000" opacity="0.35">
+      <animate attributeName="r" dur="1.2s" values="7;16;7" repeatCount="indefinite"/>
+      <animate attributeName="opacity" dur="1.2s" values="0.35;0;0.35" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
