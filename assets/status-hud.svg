@@ -73,7 +73,7 @@
     <!-- STATE -->
     <text x="824" y="98" class="label">STATE</text>
     <rect x="912" y="76" width="220" height="40" class="chip" fill="#00e5ff" filter="url(#softGlow)"/>
-    <text x="1022" y="104" text-anchor="middle" class="value">Fixing issues in the infinte depths of the multiverse.</text>
+    <text x="1022" y="104" text-anchor="middle" class="value">TRAINING ARC</text>
   </g>
 
   <!-- corner pips -->
