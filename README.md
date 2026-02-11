@@ -39,8 +39,9 @@
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/output/github-contribution-grid-snake-dark.svg" alt="snake animation" />
+  <img src="https://github-contribution-grid-snake.vercel.app/api?username=MozukuKato&theme=github-dark" />
 </p>
+
 
 ---
 
