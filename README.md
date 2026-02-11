@@ -2,6 +2,9 @@
      MOZUKU // PROFILE DOSSIER
      Dark + Anime-Core + Glitch
 ========================== -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/main/assets/status-hud.svg" width="900" alt="Status HUD" />
+</p>
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com/?font=Fira+Code&size=28&duration=2600&pause=900&color=FF0000&center=true&vCenter=true&width=780&lines=Initializing...;Loading+User:+Mozuku;Status:+ONLINE;Booting+Modules:+C%2B%2B+%7C+Lua+%7C+Python+%7C+Java+%7C+C%23+%7C+PHP;Welcome+to+the+Lab." />
