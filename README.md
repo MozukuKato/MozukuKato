@@ -8,7 +8,11 @@
 </p>
 
 <h1 align="center">🌑 Mozuku 🌑</h1>
-<h3 align="center">They/Them • 15 • Anime-Core Dev</h3>
+<h3 align="center">They/Them • 15 •
+<p align="center">
+  <img src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/main/assets/glitch-banner.svg" width="900" alt="CLASSIFIED DOSSIER // ACCESS GRANTED" />
+</p>
+
 
 <p align="center">
   <span class="glitch" data-text="CLASSIFIED DOSSIER // ACCESS GRANTED">CLASSIFIED DOSSIER // ACCESS GRANTED</span>
