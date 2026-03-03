@@ -17,6 +17,9 @@
 
 ---
 
+[![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=31oh56hae7ydcog3wl7w2n7cyuxe&cover_image=true&theme=default&show_offline=false&background_color=f21818&interchange=false&profanity=false&bar_color=396138&bar_color_cover=false)](https://github.com/kittinan/spotify-github-profile)
+---
+
 ## 🧿 Status Indicator
 
 <p align="center">
@@ -46,6 +49,7 @@
 
 
 
+
 ---
 
 ## 📟 Stat Sheet
@@ -63,3 +67,4 @@
 + I experiment.
 + I break things.
 + I fix them better.
+```
