@@ -9,7 +9,7 @@
 
 
 <h1 align="center">🌑 Mozuku 🌑</h1>
-<h3 align="center"> He/Them • 15 • Pansexual • Music Creator.</h3>
+<h3 align="center"> he/they • 15 • Pansexual • Music Creator.</h3>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/main/assets/glitch-banner.svg" width="900" alt="CLASSIFIED DOSSIER // ACCESS GRANTED" />
