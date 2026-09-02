@@ -41,11 +41,12 @@
 
 ---
 <p align="center">
-  <img src="./assets/activity-signal.svg"
-       width="100%"
-       alt="Mozuku Shadow Activity Signal" />
+  <img
+    src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/main/assets/activity-signal.svg?v=2"
+    width="100%"
+    alt="Mozuku Shadow Activity Signal"
+  />
 </p>
-
 
 
 
