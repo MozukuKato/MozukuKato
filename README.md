@@ -40,11 +40,10 @@
 </p>
 
 ---
-
 <p align="center">
   <img src="./assets/activity-signal.svg"
        width="100%"
-       alt="Mozuku activity signal" />
+       alt="Mozuku Shadow Activity Signal" />
 </p>
 
 
