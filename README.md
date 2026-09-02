@@ -40,14 +40,16 @@
 </p>
 
 ---
-<p align="center">
+
+  
+  
+  <p align="center">
   <img
-    src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/main/assets/activity-signal.svg?v=2"
+    src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/main/assets/activity-signal.svg"
     width="100%"
     alt="Mozuku Shadow Activity Signal"
   />
 </p>
-
 
 
 
