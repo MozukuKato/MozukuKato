@@ -1,1 +1,612 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="280"
+  viewBox="0 0 1200 280"
+  role="img"
+  aria-label="Mozuku Shadow System Activity Signal"
+>
+  <defs>
 
+    <!-- ============================= -->
+    <!-- BACKGROUNDS -->
+    <!-- ============================= -->
+
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070b12"/>
+      <stop offset="50%" stop-color="#04070d"/>
+      <stop offset="100%" stop-color="#020409"/>
+    </linearGradient>
+
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#09111c"/>
+      <stop offset="100%" stop-color="#060c14"/>
+    </linearGradient>
+
+    <linearGradient id="edgeAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#962731"/>
+      <stop offset="50%" stop-color="#267e8c"/>
+      <stop offset="100%" stop-color="#8a286b"/>
+    </linearGradient>
+
+    <pattern
+      id="grid"
+      width="32"
+      height="32"
+      patternUnits="userSpaceOnUse"
+    >
+      <path
+        d="M32 0H0V32"
+        fill="none"
+        stroke="#8292a8"
+        stroke-width="1"
+        stroke-opacity="0.012"
+      />
+    </pattern>
+
+
+    <!-- ============================= -->
+    <!-- ANIMATION -->
+    <!-- ============================= -->
+
+    <style>
+      @keyframes breathe {
+        0%, 100% { opacity: 0.58; }
+        50% { opacity: 1; }
+      }
+
+      @keyframes tracer {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: -3200; }
+      }
+
+      @keyframes scanner {
+        0% {
+          transform: translateX(-120px);
+          opacity: 0;
+        }
+
+        10% {
+          opacity: 0.09;
+        }
+
+        85% {
+          opacity: 0.09;
+        }
+
+        100% {
+          transform: translateX(1200px);
+          opacity: 0;
+        }
+      }
+
+      @keyframes cursor {
+        0%, 45% { opacity: 1; }
+        50%, 95% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      .mono {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          "Liberation Mono",
+          "Courier New",
+          monospace;
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 0.20em;
+        fill: #dce4ee;
+      }
+
+      .sub {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        fill: #647792;
+      }
+
+      .section {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.20em;
+        fill: #42a8b6;
+      }
+
+      .label {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        fill: #71849e;
+      }
+
+      .value {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        fill: #a8b6c8;
+      }
+
+      .tiny {
+        font-size: 8px;
+        letter-spacing: 0.11em;
+        fill: #576a84;
+      }
+
+      .breathe {
+        animation: breathe 3s ease-in-out infinite;
+      }
+
+      .tracer {
+        animation: tracer 16s linear infinite;
+      }
+
+      .scanner {
+        animation: scanner 8s linear infinite;
+      }
+
+      .cursor {
+        animation: cursor 1s step-end infinite;
+      }
+    </style>
+
+  </defs>
+
+
+  <!-- ============================= -->
+  <!-- BACKGROUND -->
+  <!-- ============================= -->
+
+  <rect
+    width="1200"
+    height="280"
+    fill="url(#bg)"
+  />
+
+  <rect
+    width="1200"
+    height="280"
+    fill="url(#grid)"
+  />
+
+
+  <!-- ============================= -->
+  <!-- SHELL -->
+  <!-- ============================= -->
+
+  <rect
+    x="18"
+    y="16"
+    width="1164"
+    height="248"
+    rx="24"
+    fill="#04070c"
+    stroke="#182435"
+    stroke-width="2"
+  />
+
+  <rect
+    x="26"
+    y="24"
+    width="1148"
+    height="232"
+    rx="18"
+    fill="url(#panel)"
+    stroke="#ffffff"
+    stroke-opacity="0.018"
+  />
+
+  <rect
+    x="18"
+    y="16"
+    width="1164"
+    height="248"
+    rx="24"
+    fill="none"
+    stroke="url(#edgeAccent)"
+    stroke-width="1.5"
+    stroke-dasharray="120 3200"
+    stroke-linecap="round"
+    opacity="0.52"
+    class="tracer"
+  />
+
+
+  <!-- ============================= -->
+  <!-- HEADER -->
+  <!-- ============================= -->
+
+  <g class="mono">
+
+    <circle
+      cx="52"
+      cy="46"
+      r="4"
+      fill="#2b7f8c"
+      class="breathe"
+    />
+
+    <circle
+      cx="68"
+      cy="46"
+      r="4"
+      fill="#78275e"
+      opacity="0.7"
+    />
+
+    <circle
+      cx="84"
+      cy="46"
+      r="4"
+      fill="#922e38"
+      opacity="0.75"
+    />
+
+    <text
+      x="104"
+      y="51"
+      class="title"
+    >
+      SHADOW_SYS // ACTIVITY SIGNAL
+    </text>
+
+    <text
+      x="104"
+      y="72"
+      class="sub"
+    >
+      CONTRIBUTION MATRIX / REPOSITORY TELEMETRY
+    </text>
+
+    <text
+      x="982"
+      y="47"
+      class="label"
+    >
+      NODE
+    </text>
+
+    <text
+      x="1034"
+      y="47"
+      class="value"
+      fill="#c13a43"
+    >
+      SHDW-02
+    </text>
+
+    <circle
+      cx="986"
+      cy="68"
+      r="3"
+      fill="#2b7f8c"
+      class="breathe"
+    />
+
+    <text
+      x="998"
+      y="71"
+      class="label"
+    >
+      SIGNAL ACTIVE
+    </text>
+
+  </g>
+
+
+  <line
+    x1="48"
+    y1="88"
+    x2="1152"
+    y2="88"
+    stroke="#ffffff"
+    stroke-opacity="0.035"
+  />
+
+
+  <!-- ============================= -->
+  <!-- MATRIX BACKDROP -->
+  <!-- ============================= -->
+
+  <rect
+    x="52"
+    y="108"
+    width="760"
+    height="116"
+    rx="14"
+    fill="#060c14"
+    stroke="#ffffff"
+    stroke-opacity="0.022"
+  />
+
+
+  <!-- ============================= -->
+  <!-- ACTIVITY CELLS -->
+  <!-- ============================= -->
+
+  <g>
+
+    <!-- ROW 1 -->
+    <rect x="76"  y="128" width="12" height="12" rx="3" fill="#0c1520"/>
+    <rect x="96"  y="128" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="116" y="128" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="136" y="128" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="156" y="128" width="12" height="12" rx="3" fill="#2fa5a4" class="breathe"/>
+    <rect x="176" y="128" width="12" height="12" rx="3" fill="#0c1520"/>
+    <rect x="196" y="128" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="216" y="128" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="236" y="128" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="256" y="128" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="276" y="128" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="296" y="128" width="12" height="12" rx="3" fill="#0c1520"/>
+    <rect x="316" y="128" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="336" y="128" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="356" y="128" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="376" y="128" width="12" height="12" rx="3" fill="#2fa5a4" class="breathe"/>
+    <rect x="396" y="128" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="416" y="128" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="436" y="128" width="12" height="12" rx="3" fill="#0c1520"/>
+    <rect x="456" y="128" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="476" y="128" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="496" y="128" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="516" y="128" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="536" y="128" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="556" y="128" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="576" y="128" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="596" y="128" width="12" height="12" rx="3" fill="#0c1520"/>
+    <rect x="616" y="128" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="636" y="128" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="656" y="128" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="676" y="128" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="696" y="128" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="716" y="128" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="736" y="128" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="756" y="128" width="12" height="12" rx="3" fill="#287c85"/>
+
+    <!-- ROW 2 -->
+    <rect x="76"  y="148" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="96"  y="148" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="116" y="148" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="136" y="148" width="12" height="12" rx="3" fill="#0c1520"/>
+    <rect x="156" y="148" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="176" y="148" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="196" y="148" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="216" y="148" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="236" y="148" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="256" y="148" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="276" y="148" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="296" y="148" width="12" height="12" rx="3" fill="#2fa5a4" class="breathe"/>
+    <rect x="316" y="148" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="336" y="148" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="356" y="148" width="12" height="12" rx="3" fill="#0c1520"/>
+    <rect x="376" y="148" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="396" y="148" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="416" y="148" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="436" y="148" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="456" y="148" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="476" y="148" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="496" y="148" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="516" y="148" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="536" y="148" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="556" y="148" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="576" y="148" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="596" y="148" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="616" y="148" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="636" y="148" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="656" y="148" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="676" y="148" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="696" y="148" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="716" y="148" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="736" y="148" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="756" y="148" width="12" height="12" rx="3" fill="#2fa5a4"/>
+
+    <!-- ROW 3 -->
+    <rect x="76"  y="168" width="12" height="12" rx="3" fill="#0c1520"/>
+    <rect x="96"  y="168" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="116" y="168" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="136" y="168" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="156" y="168" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="176" y="168" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="196" y="168" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="216" y="168" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="236" y="168" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="256" y="168" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="276" y="168" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="296" y="168" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="316" y="168" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="336" y="168" width="12" height="12" rx="3" fill="#0c1520"/>
+    <rect x="356" y="168" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="376" y="168" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="396" y="168" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="416" y="168" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="436" y="168" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="456" y="168" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="476" y="168" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="496" y="168" width="12" height="12" rx="3" fill="#2fa5a4" class="breathe"/>
+    <rect x="516" y="168" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="536" y="168" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="556" y="168" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="576" y="168" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="596" y="168" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="616" y="168" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="636" y="168" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="656" y="168" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="676" y="168" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="696" y="168" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="716" y="168" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="736" y="168" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="756" y="168" width="12" height="12" rx="3" fill="#287c85"/>
+
+    <!-- ROW 4 -->
+    <rect x="76"  y="188" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="96"  y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="116" y="188" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="136" y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="156" y="188" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="176" y="188" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="196" y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="216" y="188" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="236" y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="256" y="188" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="276" y="188" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="296" y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="316" y="188" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="336" y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="356" y="188" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="376" y="188" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="396" y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="416" y="188" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="436" y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="456" y="188" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="476" y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="496" y="188" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="516" y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="536" y="188" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="556" y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="576" y="188" width="12" height="12" rx="3" fill="#17303a"/>
+    <rect x="596" y="188" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="616" y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="636" y="188" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="656" y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="676" y="188" width="12" height="12" rx="3" fill="#205865"/>
+    <rect x="696" y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="716" y="188" width="12" height="12" rx="3" fill="#2fa5a4"/>
+    <rect x="736" y="188" width="12" height="12" rx="3" fill="#287c85"/>
+    <rect x="756" y="188" width="12" height="12" rx="3" fill="#205865"/>
+
+  </g>
+
+
+  <!-- SCANNING COLUMN -->
+  <rect
+    x="62"
+    y="118"
+    width="26"
+    height="92"
+    rx="7"
+    fill="#63c3c6"
+    opacity="0.07"
+    class="scanner"
+  />
+
+
+  <!-- ============================= -->
+  <!-- RIGHT TELEMETRY -->
+  <!-- ============================= -->
+
+  <rect
+    x="832"
+    y="108"
+    width="316"
+    height="116"
+    rx="14"
+    fill="#060c14"
+    stroke="#ffffff"
+    stroke-opacity="0.022"
+  />
+
+  <g class="mono">
+
+    <text
+      x="856"
+      y="135"
+      class="section"
+    >
+      TELEMETRY
+    </text>
+
+    <text
+      x="856"
+      y="160"
+      class="label"
+    >
+      CURRENT LOAD
+    </text>
+
+    <text
+      x="1106"
+      y="160"
+      text-anchor="end"
+      class="value"
+    >
+      73%
+    </text>
+
+    <rect
+      x="856"
+      y="169"
+      width="250"
+      height="8"
+      rx="4"
+      fill="#0d1722"
+    />
+
+    <rect
+      x="856"
+      y="169"
+      width="183"
+      height="8"
+      rx="4"
+      fill="#287c85"
+      class="breathe"
+    />
+
+    <text
+      x="856"
+      y="198"
+      class="tiny"
+    >
+      &gt; commits detected
+    </text>
+
+    <text
+      x="856"
+      y="214"
+      class="tiny"
+    >
+      &gt; repositories active
+    </text>
+
+  </g>
+
+
+  <!-- ============================= -->
+  <!-- FOOTER -->
+  <!-- ============================= -->
+
+  <g class="mono">
+
+    <text
+      x="52"
+      y="244"
+      class="tiny"
+    >
+      MATRIX_SOURCE: LOCAL_SIGNAL
+    </text>
+
+    <text
+      x="984"
+      y="244"
+      class="tiny"
+    >
+      STATUS:NOMINAL
+    </text>
+
+    <text
+      x="1134"
+      y="244"
+      class="tiny cursor"
+      fill="#2b7f8c"
+    >
+      █
+    </text>
+
+  </g>
+
+</svg>
