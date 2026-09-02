@@ -17,7 +17,15 @@
 
 ---
 
-[![spotify-github-profile](https://spotify-github-profile.kittinanx.com/api/view?uid=31oh56hae7ydcog3wl7w2n7cyuxe&cover_image=true&theme=default&show_offline=false&background_color=f21818&interchange=false&profanity=false&bar_color=396138&bar_color_cover=false)](https://github.com/kittinan/spotify-github-profile)
+## 🎧 Audio Feed
+
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/main/assets/audio-feed.svg"
+    width="100%"
+    alt="Mozuku Audio Feed"
+  />
+</p>
 ---
 
 ## 🧿 Status Indicator
