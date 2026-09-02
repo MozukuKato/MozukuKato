@@ -66,9 +66,10 @@
 
 ## 🩸 About Me
 
-```diff
-+ I build.
-+ I experiment.
-+ I break things.
-+ I fix them better.
-```
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/MozukuKato/MozukuKato/main/assets/subject-profile.svg"
+    width="100%"
+    alt="Mozuku Subject Profile"
+  />
+</p>
