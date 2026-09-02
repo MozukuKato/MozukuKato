@@ -1,0 +1,246 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="270"
+  viewBox="0 0 1200 270"
+  role="img"
+  aria-label="Mozuku subject profile"
+>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070b12"/>
+      <stop offset="50%" stop-color="#04070d"/>
+      <stop offset="100%" stop-color="#020409"/>
+    </linearGradient>
+
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#09111c"/>
+      <stop offset="100%" stop-color="#060c14"/>
+    </linearGradient>
+
+    <linearGradient id="edgeAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#962731"/>
+      <stop offset="50%" stop-color="#267e8c"/>
+      <stop offset="100%" stop-color="#8a286b"/>
+    </linearGradient>
+
+    <style>
+      @keyframes breathe {
+        0%, 100% { opacity: 0.55; }
+        50% { opacity: 1; }
+      }
+
+      @keyframes tracer {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: -3200; }
+      }
+
+      @keyframes blink {
+        0%, 45% { opacity: 1; }
+        50%, 95% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      .mono {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          "Liberation Mono",
+          "Courier New",
+          monospace;
+      }
+
+      .title {
+        font-size: 17px;
+        font-weight: 800;
+        letter-spacing: 0.22em;
+        fill: #dce4ee;
+      }
+
+      .sub {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        fill: #647792;
+      }
+
+      .name {
+        font-size: 19px;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        fill: #e5edf7;
+      }
+
+      .role {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        fill: #8ba0bb;
+      }
+
+      .body {
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        fill: #afbdd0;
+      }
+
+      .section {
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.20em;
+        fill: #42a8b6;
+      }
+
+      .chipText {
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        fill: #dce6f4;
+      }
+
+      .tiny {
+        font-size: 9px;
+        letter-spacing: 0.11em;
+        fill: #5f738d;
+      }
+
+      .status {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        fill: #8fa4bf;
+      }
+
+      .breathe { animation: breathe 3s ease-in-out infinite; }
+      .tracer { animation: tracer 16s linear infinite; }
+      .cursor { animation: blink 1s step-end infinite; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="270" fill="url(#bg)"/>
+
+  <!-- shell -->
+  <rect
+    x="18"
+    y="16"
+    width="1164"
+    height="238"
+    rx="24"
+    fill="#04070c"
+    stroke="#182435"
+    stroke-width="2"
+  />
+
+  <rect
+    x="26"
+    y="24"
+    width="1148"
+    height="222"
+    rx="18"
+    fill="url(#panel)"
+    stroke="#ffffff"
+    stroke-opacity="0.018"
+  />
+
+  <!-- perimeter tracer -->
+  <rect
+    x="18"
+    y="16"
+    width="1164"
+    height="238"
+    rx="24"
+    fill="none"
+    stroke="url(#edgeAccent)"
+    stroke-width="1.5"
+    stroke-dasharray="120 3200"
+    stroke-linecap="round"
+    opacity="0.52"
+    class="tracer"
+  />
+
+  <!-- header -->
+  <g class="mono">
+    <circle cx="52" cy="46" r="4" fill="#2b7f8c" class="breathe"/>
+    <circle cx="68" cy="46" r="4" fill="#78275e" opacity="0.7"/>
+    <circle cx="84" cy="46" r="4" fill="#922e38" opacity="0.75"/>
+
+    <text x="104" y="51" class="title">SHADOW_SYS // SUBJECT PROFILE</text>
+    <text x="1078" y="51" class="sub" text-anchor="end">FILE 02</text>
+  </g>
+
+  <!-- divider -->
+  <line
+    x1="48"
+    y1="88"
+    x2="1152"
+    y2="88"
+    stroke="#ffffff"
+    stroke-opacity="0.035"
+  />
+
+  <!-- subject identity -->
+  <g class="mono">
+    <text x="72" y="122" class="name">MOZUKU / SHADOW</text>
+    <text x="72" y="144" class="role">Artist • Producer • Vocalist • Developer</text>
+  </g>
+
+  <!-- body copy -->
+  <g class="mono">
+    <text x="72" y="178" class="body">
+      Music artist and developer operating somewhere between
+    </text>
+    <text x="72" y="198" class="body">
+      distorted guitars and questionable amounts of code.
+    </text>
+
+    <text x="72" y="226" class="body">
+      I make heavy atmospheric music, build games and systems,
+    </text>
+    <text x="72" y="246" class="body">
+      and obsess over details that probably did not need obsessing.
+    </text>
+  </g>
+
+  <!-- right section -->
+  <g class="mono">
+    <text x="742" y="122" class="section">PRIMARY SIGNALS</text>
+
+    <!-- row 1 -->
+    <rect x="742" y="136" width="84" height="24" rx="12" fill="#07131a" stroke="#267e8c" stroke-opacity="0.35"/>
+    <text x="784" y="151" text-anchor="middle" class="chipText">MUSIC</text>
+
+    <rect x="838" y="136" width="112" height="24" rx="12" fill="#07131a" stroke="#267e8c" stroke-opacity="0.35"/>
+    <text x="894" y="151" text-anchor="middle" class="chipText">GAME DEV</text>
+
+    <rect x="962" y="136" width="76" height="24" rx="12" fill="#07131a" stroke="#962731" stroke-opacity="0.35"/>
+    <text x="1000" y="151" text-anchor="middle" class="chipText">CODE</text>
+
+    <!-- row 2 -->
+    <rect x="742" y="170" width="92" height="24" rx="12" fill="#07131a" stroke="#8a286b" stroke-opacity="0.35"/>
+    <text x="788" y="185" text-anchor="middle" class="chipText">VOCALS</text>
+
+    <rect x="846" y="170" width="88" height="24" rx="12" fill="#07131a" stroke="#267e8c" stroke-opacity="0.35"/>
+    <text x="890" y="185" text-anchor="middle" class="chipText">DESIGN</text>
+  </g>
+
+  <!-- bottom strip -->
+  <rect
+    x="72"
+    y="214"
+    width="1056"
+    height="24"
+    rx="12"
+    fill="#050b12"
+    stroke="#ffffff"
+    stroke-opacity="0.022"
+  />
+
+  <g class="mono">
+    <text x="92" y="230" class="status">STATUS:// creating something</text>
+    <text x="1102" y="230" class="tiny cursor" fill="#2b7f8c">█</text>
+  </g>
+</svg>
