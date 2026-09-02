@@ -1,51 +1,331 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="110" viewBox="0 0 1200 110">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1200"
+  height="110"
+  viewBox="0 0 1200 110"
+  role="img"
+  aria-label="Classified Dossier Access Granted"
+>
   <defs>
-    <filter id="glitch">
-      <feTurbulence type="fractalNoise" baseFrequency="0.01 0.2" numOctaves="2" seed="2" result="noise">
-        <animate attributeName="baseFrequency" dur="2.4s" values="0.01 0.2;0.02 0.35;0.01 0.2" repeatCount="indefinite"/>
-      </feTurbulence>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G">
-        <animate attributeName="scale" dur="1.2s" values="2;14;3;10;2" repeatCount="indefinite"/>
-      </feDisplacementMap>
-    </filter>
+    <!-- BACKGROUND -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070a10"/>
+      <stop offset="50%" stop-color="#030509"/>
+      <stop offset="100%" stop-color="#010204"/>
+    </linearGradient>
+
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#060910"/>
+      <stop offset="50%" stop-color="#020305"/>
+      <stop offset="100%" stop-color="#060910"/>
+    </linearGradient>
+
+    <linearGradient id="edgeAccent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8f1f2a"/>
+      <stop offset="50%" stop-color="#1f6d7d"/>
+      <stop offset="100%" stop-color="#74205e"/>
+    </linearGradient>
+
+    <linearGradient id="hairline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8f1f2a" stop-opacity="0"/>
+      <stop offset="15%" stop-color="#8f1f2a" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#43566c" stop-opacity="0.22"/>
+      <stop offset="85%" stop-color="#74205e" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#74205e" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="shadowPool" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.52"/>
+      <stop offset="70%" stop-color="#000000" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
 
     <style>
-      .bg { fill: #0d0d0d; }
-      .base {
-        font: 700 34px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
+      @keyframes breathe {
+        0%, 100% { opacity: 0.60; }
+        50% { opacity: 1; }
       }
+
+      @keyframes tracer {
+        from { stroke-dashoffset: 0; }
+        to { stroke-dashoffset: -2800; }
+      }
+
+      @keyframes shadowSweep {
+        0% {
+          transform: translateX(-320px);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.14;
+        }
+        75% {
+          opacity: 0.14;
+        }
+        100% {
+          transform: translateX(1450px);
+          opacity: 0;
+        }
+      }
+
+      @keyframes ghostLeft {
+        0%, 100% {
+          transform: translate(-1px, 0px);
+          opacity: 0.08;
+        }
+        8% {
+          transform: translate(-2px, 0px);
+          opacity: 0.16;
+        }
+        10% {
+          transform: translate(1px, 0px);
+          opacity: 0.04;
+        }
+        12% {
+          transform: translate(-1px, 0px);
+          opacity: 0.10;
+        }
+        48% {
+          transform: translate(-1px, 0px);
+          opacity: 0.08;
+        }
+        50% {
+          transform: translate(-3px, 0px);
+          opacity: 0.14;
+        }
+        52% {
+          transform: translate(0px, 0px);
+          opacity: 0.05;
+        }
+      }
+
+      @keyframes ghostRight {
+        0%, 100% {
+          transform: translate(1px, 0px);
+          opacity: 0.06;
+        }
+        18% {
+          transform: translate(2px, 0px);
+          opacity: 0.14;
+        }
+        20% {
+          transform: translate(-1px, 0px);
+          opacity: 0.04;
+        }
+        22% {
+          transform: translate(1px, 0px);
+          opacity: 0.08;
+        }
+        68% {
+          transform: translate(1px, 0px);
+          opacity: 0.06;
+        }
+        70% {
+          transform: translate(3px, 0px);
+          opacity: 0.13;
+        }
+        72% {
+          transform: translate(0px, 0px);
+          opacity: 0.04;
+        }
+      }
+
+      @keyframes hairlineSweep {
+        0% {
+          transform: translateX(-180px);
+          opacity: 0;
+        }
+        15% {
+          opacity: 0.75;
+        }
+        85% {
+          opacity: 0.75;
+        }
+        100% {
+          transform: translateX(1320px);
+          opacity: 0;
+        }
+      }
+
+      @keyframes blink {
+        0%, 45% { opacity: 1; }
+        50%, 95% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      .mono {
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          "Liberation Mono",
+          "Courier New",
+          monospace;
+      }
+
+      .main {
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        fill: #d7dee8;
+      }
+
+      .micro {
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 0.17em;
+        fill: #55677f;
+      }
+
+      .ghostText {
+        font-size: 24px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+      }
+
+      .breathe { animation: breathe 3s ease-in-out infinite; }
+      .tracer { animation: tracer 15s linear infinite; }
+      .shadowSweep { animation: shadowSweep 10s linear infinite; }
+      .ghostLeft { animation: ghostLeft 4.8s ease-in-out infinite; }
+      .ghostRight { animation: ghostRight 5.1s ease-in-out infinite; }
+      .hairlineSweep { animation: hairlineSweep 7s linear infinite; }
+      .cursor { animation: blink 1s step-end infinite; }
     </style>
   </defs>
 
-  <rect class="bg" x="0" y="0" width="1200" height="110" rx="18" />
+  <!-- MAIN BG -->
+  <rect width="1200" height="110" rx="18" fill="url(#bg)"/>
 
-  <!-- cyan layer -->
-  <g opacity="0.85">
-    <text x="600" y="68" text-anchor="middle" class="base" fill="#00e5ff" filter="url(#glitch)">
+  <!-- SHELL -->
+  <rect
+    x="2"
+    y="2"
+    width="1196"
+    height="106"
+    rx="18"
+    fill="url(#panel)"
+    stroke="#182331"
+    stroke-width="2"
+  />
+
+  <rect
+    x="8"
+    y="8"
+    width="1184"
+    height="94"
+    rx="14"
+    fill="none"
+    stroke="#ffffff"
+    stroke-opacity="0.018"
+  />
+
+  <!-- MOVING BORDER SIGNAL -->
+  <rect
+    x="2"
+    y="2"
+    width="1196"
+    height="106"
+    rx="18"
+    fill="none"
+    stroke="url(#edgeAccent)"
+    stroke-width="1.5"
+    stroke-dasharray="110 2800"
+    stroke-linecap="round"
+    opacity="0.52"
+    class="tracer"
+  />
+
+  <!-- ATMOSPHERE -->
+  <ellipse
+    cx="600"
+    cy="56"
+    rx="335"
+    ry="66"
+    fill="url(#shadowPool)"
+  />
+
+  <rect
+    x="-240"
+    y="8"
+    width="140"
+    height="94"
+    fill="#000000"
+    opacity="0.12"
+    class="shadowSweep"
+  />
+
+  <!-- TOP META -->
+  <g class="mono">
+    <circle cx="34" cy="24" r="3" fill="#2b7f8c" class="breathe"/>
+    <circle cx="48" cy="24" r="3" fill="#74265d" opacity="0.66"/>
+    <circle cx="62" cy="24" r="3" fill="#8e2932" opacity="0.72"/>
+
+    <text x="82" y="27" class="micro">SHADOW_ARCHIVE</text>
+
+    <text x="1010" y="27" class="micro">CLEARANCE</text>
+    <text x="1092" y="27" class="micro" fill="#a7343d">GRANTED</text>
+  </g>
+
+  <!-- HAIRLINE -->
+  <rect x="34" y="36" width="1132" height="1" fill="url(#hairline)"/>
+  <rect
+    x="-160"
+    y="35"
+    width="130"
+    height="2"
+    rx="1"
+    fill="#7f2730"
+    opacity="0.55"
+    class="hairlineSweep"
+  />
+
+  <!-- GHOST TEXT LAYERS -->
+  <g class="mono ghostLeft">
+    <text
+      x="600"
+      y="73"
+      text-anchor="middle"
+      class="ghostText"
+      fill="#2a7180"
+      opacity="0.10"
+    >
       CLASSIFIED DOSSIER // ACCESS GRANTED
     </text>
   </g>
 
-  <!-- magenta layer -->
-  <g opacity="0.7" transform="translate(-2,1)">
-    <text x="600" y="68" text-anchor="middle" class="base" fill="#ff00b3">
-      CLASSIFIED DOSSIER // ACCESS GRANTED
-    </text>
-    <animateTransform attributeName="transform" type="translate" dur="0.6s"
-      values="-2 1;2 -1;-1 0;1 1;-2 1" repeatCount="indefinite"/>
-  </g>
-
-  <!-- red main layer -->
-  <g opacity="1">
-    <text x="600" y="68" text-anchor="middle" class="base" fill="#ff3b3b">
+  <g class="mono ghostRight">
+    <text
+      x="600"
+      y="73"
+      text-anchor="middle"
+      class="ghostText"
+      fill="#8d294f"
+      opacity="0.08"
+    >
       CLASSIFIED DOSSIER // ACCESS GRANTED
     </text>
   </g>
 
-  <!-- scanline -->
-  <rect x="40" y="54" width="1120" height="2" fill="#ff0000" opacity="0.35">
-    <animate attributeName="y" dur="2.2s" values="20;90;20" repeatCount="indefinite"/>
-  </rect>
+  <!-- MAIN TEXT -->
+  <g class="mono">
+    <text
+      x="600"
+      y="73"
+      text-anchor="middle"
+      class="main"
+    >
+      CLASSIFIED DOSSIER
+      <tspan fill="#596a80"> // </tspan>
+      <tspan fill="#b73a42" class="breathe">ACCESS GRANTED</tspan>
+    </text>
+  </g>
+
+  <!-- BOTTOM READOUT -->
+  <g class="mono">
+    <text x="34" y="95" class="micro">DOSSIER_ID: SHDW-02</text>
+    <text x="1012" y="95" class="micro">STATUS:NOMINAL</text>
+    <text x="1150" y="95" class="micro cursor" fill="#2b7f8c">█</text>
+  </g>
 </svg>
